@@ -7,7 +7,7 @@ using System.Windows.Media.Animation;
 
 namespace VerticalTabControl.UI.Units
 {
-    public class Tab : ContentControl
+    public class VerticalTabControl : ContentControl
     {
         public double ContentHeight
         {
@@ -17,7 +17,7 @@ namespace VerticalTabControl.UI.Units
 
         // Using a DependencyProperty as the backing store for ContentHeight.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ContentHeightProperty =
-            DependencyProperty.Register ("ContentHeight", typeof (double), typeof (Tab), new PropertyMetadata (0.0));
+            DependencyProperty.Register ("ContentHeight", typeof (double), typeof (VerticalTabControl), new PropertyMetadata (0.0));
 
 
         public DataTemplate TabItem
@@ -28,7 +28,7 @@ namespace VerticalTabControl.UI.Units
 
         // Using a DependencyProperty as the backing store for TabItem.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TabItemProperty =
-            DependencyProperty.Register ("TabItem", typeof (DataTemplate), typeof (Tab), new PropertyMetadata (null));
+            DependencyProperty.Register ("TabItem", typeof (DataTemplate), typeof (VerticalTabControl), new PropertyMetadata (null));
 
         public DataTemplate TabContent
         {
@@ -38,7 +38,7 @@ namespace VerticalTabControl.UI.Units
 
         // Using a DependencyProperty as the backing store for TabItem.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TabContentProperty =
-            DependencyProperty.Register ("TabContent", typeof (DataTemplate), typeof (Tab), new PropertyMetadata (null));
+            DependencyProperty.Register ("TabContent", typeof (DataTemplate), typeof (VerticalTabControl), new PropertyMetadata (null));
 
 
 
@@ -50,11 +50,11 @@ namespace VerticalTabControl.UI.Units
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ItemsSourceProperty =
-            DependencyProperty.Register ("ItemsSource", typeof (IEnumerable), typeof (Tab), new PropertyMetadata (null));
+            DependencyProperty.Register ("ItemsSource", typeof (IEnumerable), typeof (VerticalTabControl), new PropertyMetadata (null));
 
-        static Tab()
+        static VerticalTabControl()
         {
-            DefaultStyleKeyProperty.OverrideMetadata (typeof (Tab), new FrameworkPropertyMetadata (typeof (Tab)));
+            DefaultStyleKeyProperty.OverrideMetadata (typeof (VerticalTabControl), new FrameworkPropertyMetadata (typeof (VerticalTabControl)));
         }
 
         protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)

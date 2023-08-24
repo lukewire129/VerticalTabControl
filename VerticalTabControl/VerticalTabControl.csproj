@@ -5,6 +5,19 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <PackageId>VerticalTabControl</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>lukewire</Authors>
+    <Company>lukewire</Company>
+    <Product>lukewire</Product>
+    <Copyright>lukewire</Copyright>
+    <Description>
+      VerticalTabControl Component
+    </Description>
+    <RepositoryUrl>https://github.com/lukewire129/VerticalTabControl</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/lukewire129/VerticalTabControl</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>lukewire,wpf,component,opensource,VerticalTabControl</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

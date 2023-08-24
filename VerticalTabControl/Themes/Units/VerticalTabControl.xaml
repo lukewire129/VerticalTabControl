@@ -2,11 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:VerticalTabControl.UI.Units">
 
-    <Style TargetType="{x:Type units:Tab}">
+    <Style TargetType="{x:Type units:VerticalTabControl}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:Tab}">
+                <ControlTemplate TargetType="{x:Type units:VerticalTabControl}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
@@ -107,7 +107,7 @@
                                             <Setter Property="ItemContainerStyle">
                                                 <Setter.Value>
                                                     <Style TargetType="{x:Type ListBoxItem}">
-                                                        <Setter Property="Height" Value="{Binding Path=ContentHeight, RelativeSource={RelativeSource AncestorType={x:Type units:Tab}}}"/>
+                                                        <Setter Property="Height" Value="{Binding Path=ContentHeight, RelativeSource={RelativeSource AncestorType={x:Type units:VerticalTabControl}}}"/>
                                                         <Setter Property="Template">
                                                             <Setter.Value>
                                                                 <ControlTemplate TargetType="{x:Type ListBoxItem}">

@@ -18,6 +18,6 @@
         </DataTemplate>
     </Window.Resources>
     <Grid>
-        <units:Tab TabItem="{StaticResource TabItem}" TabContent="{StaticResource TabContent}" ItemsSource="{Binding TabModels}"/>
+        <units:VerticalTabControl TabItem="{StaticResource TabItem}" TabContent="{StaticResource TabContent}" ItemsSource="{Binding TabModels}"/>
     </Grid>
 </Window>
