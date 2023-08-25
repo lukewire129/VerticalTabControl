@@ -52,6 +52,46 @@ namespace VerticalTabControl.UI.Units
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register ("ItemsSource", typeof (IEnumerable), typeof (VerticalTabControl), new PropertyMetadata (null));
 
+        public Brush SelectTabTextColor
+        {
+            get { return (Brush)GetValue (SelectTabTextColorProperty); }
+            set { SetValue (SelectTabTextColorProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SelectTabItemColor.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SelectTabTextColorProperty =
+            DependencyProperty.Register ("SelectTabTextColor", typeof (Brush), typeof (VerticalTabControl), new PropertyMetadata (new SolidColorBrush (Colors.White)));
+
+        public Brush SelectTabBackgroundColor
+        {
+            get { return (Brush)GetValue (SelectTabBackgroundColorProperty); }
+            set { SetValue (SelectTabBackgroundColorProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SelectTabItemColor.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SelectTabBackgroundColorProperty =
+            DependencyProperty.Register ("SelectTabBackgroundColor", typeof (Brush), typeof (VerticalTabControl), new PropertyMetadata (new SolidColorBrush ((Color)ColorConverter.ConvertFromString ("#1e1e1e"))));
+
+        public Brush HoverTabBackgroundColor
+        {
+            get { return (Brush)GetValue (HoverTabBackgroundColorProperty); }
+            set { SetValue (HoverTabBackgroundColorProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SelectTabItemColor.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty HoverTabBackgroundColorProperty =
+            DependencyProperty.Register ("HoverTabBackgroundColor", typeof (Brush), typeof (VerticalTabControl), new PropertyMetadata (new SolidColorBrush ((Color)ColorConverter.ConvertFromString ("#1e1e1e"))));
+
+        public Brush HoverTabTextColor
+        {
+            get { return (Brush)GetValue (HoverTabTextColorProperty); }
+            set { SetValue (HoverTabTextColorProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SelectTabItemColor.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty HoverTabTextColorProperty =
+            DependencyProperty.Register ("HoverTabTextColor", typeof (Brush), typeof (VerticalTabControl), new PropertyMetadata (new SolidColorBrush (Colors.White)));
+
         static VerticalTabControl()
         {
             DefaultStyleKeyProperty.OverrideMetadata (typeof (VerticalTabControl), new FrameworkPropertyMetadata (typeof (VerticalTabControl)));
