@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 
@@ -110,13 +111,36 @@ namespace VerticalTabControl.UI.Units
 
         private ListBox item;
         private ListBox content;
-
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate ();
             item = GetTemplateChild ("PART_ITEM") as ListBox;
             content = GetTemplateChild ("PART_CONTENT") as ListBox;
             item.SelectionChanged += Item_SelectionChanged;
+        }
+
+        public void MouseOverTriggers()
+        {
+            MultiTrigger multiTrigger = new MultiTrigger ();
+            multiTrigger.Conditions.Add (new Condition (UIElement.IsMouseOverProperty, true));
+            multiTrigger.Conditions.Add (new Condition (Selector.IsSelectedProperty, false));
+
+            multiTrigger.EnterActions.Add (new BeginStoryboard
+            {
+                Storyboard = new Storyboard
+                {
+
+                }
+            });
+            multiTrigger.ExitActions.Add (new BeginStoryboard
+            {
+                Storyboard = new Storyboard
+                {
+
+                }
+            });
+
+            this.ContentTemplate.Triggers.Add (multiTrigger);
         }
 
         private void Item_SelectionChanged(object sender, SelectionChangedEventArgs e)
