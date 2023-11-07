@@ -7,5 +7,6 @@ VeticalTabControl
 
 
 
-https://github.com/lukewire129/VerticalTabControl/assets/54387261/3a7cfb3f-2676-4f69-82db-f1e23a3dad11
+
+https://github.com/lukewire129/VerticalTabControl/assets/54387261/068a336b-13b3-4d1e-8139-efe77138dd6c
 
