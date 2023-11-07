@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 
 namespace VerticalTabControl.UI.Units
 {
@@ -69,38 +67,40 @@ namespace VerticalTabControl.UI.Units
         }
 
         private ListBox item;
-        private ListBox content;
-
+        private TabContent content;
+        private ScrollViewer contentScroll;
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate ();
             item = GetTemplateChild ("PART_ITEM") as ListBox;
-            content = GetTemplateChild ("PART_CONTENT") as ListBox;
+            content = GetTemplateChild ("PART_CONTENT") as TabContent;
+            //contentScroll = content.GetTemplateChild ("PART_ContentScroll") as ScrollViewer;
             item.SelectionChanged += Item_SelectionChanged;
         }
 
         private void Item_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             double idx = this.item.SelectedIndex;
-            double moveOffeset = idx * this.ActualHeight;
-            this.ModeScroll (moveOffeset);
+            double moveOffeset = idx * ContentHeight;
+            content.ModeScroll (moveOffeset);
         }
 
         double lastVerticalOffset = 0;
         private void ModeScroll(double targetVerticalOffset)
         {
-            TranslateTransform translateTransform = new TranslateTransform ();
-            content.RenderTransform = translateTransform;
+            contentScroll.ScrollToVerticalOffset(targetVerticalOffset);
+            //TranslateTransform translateTransform = new TranslateTransform ();
+            //content.RenderTransform = translateTransform;
 
-            DoubleAnimation verticalOffsetAnimation = new DoubleAnimation
-            {
-                From = -lastVerticalOffset,
-                To = -targetVerticalOffset,
-                Duration = TimeSpan.FromMilliseconds (300) // 애니메이션 지속 시간
-            };
-            lastVerticalOffset = targetVerticalOffset;
-            // ScrollViewer의 스크롤 위치에 애니메이션 적용
-            translateTransform.BeginAnimation (TranslateTransform.YProperty, verticalOffsetAnimation);
+            //DoubleAnimation verticalOffsetAnimation = new DoubleAnimation
+            //{
+            //    From = -lastVerticalOffset,
+            //    To = -targetVerticalOffset,
+            //    Duration = TimeSpan.FromMilliseconds (300) // 애니메이션 지속 시간
+            //};
+            //lastVerticalOffset = targetVerticalOffset;
+            //// ScrollViewer의 스크롤 위치에 애니메이션 적용
+            //translateTransform.BeginAnimation (TranslateTransform.YProperty, verticalOffsetAnimation);
         }
         private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
         {

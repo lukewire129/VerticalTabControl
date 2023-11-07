@@ -1,6 +1,6 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/VerticalTabControl;component/Themes/Units/VerticalTabControl.xaml"/>
+        <ResourceDictionary Source="/VerticalTabControl;component/Themes/Units/TabContent.xaml" />
+        <ResourceDictionary Source="/VerticalTabControl;component/Themes/Units/VerticalTabControl.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
