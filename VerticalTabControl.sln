@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VerticalTabControlExample_2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerticalTabsControlExample_3_AddDelete", "VerticalTabsControlExample_3_AddDelete\VerticalTabsControlExample_3_AddDelete.csproj", "{42CED6F9-3B8A-481D-9E8D-1EF04D1F6863}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerticalTabsControlExample_4_Control", "VerticalTabsControlExample_4_Control\VerticalTabsControlExample_4_Control.csproj", "{4DC1428F-BDDE-4AC8-B7FA-2208582047F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{42CED6F9-3B8A-481D-9E8D-1EF04D1F6863}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42CED6F9-3B8A-481D-9E8D-1EF04D1F6863}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42CED6F9-3B8A-481D-9E8D-1EF04D1F6863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC1428F-BDDE-4AC8-B7FA-2208582047F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC1428F-BDDE-4AC8-B7FA-2208582047F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC1428F-BDDE-4AC8-B7FA-2208582047F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC1428F-BDDE-4AC8-B7FA-2208582047F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
